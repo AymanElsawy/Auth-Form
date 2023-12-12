@@ -5,6 +5,9 @@
   background-color: transparent;
   color: #31304d;
 }
+ label {
+  color: #31304d;
+}
 .form-control {
   background-color: #31304d;
   color: white;
@@ -89,5 +92,3 @@
     padding: 0px 4px;
   }
 }
-
-/* an */

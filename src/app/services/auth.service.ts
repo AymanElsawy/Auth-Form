@@ -14,4 +14,8 @@ export class AuthService {
       email, password // send email and password
     });
   }
+
+  register(user: FormData) {
+    return this.http.post('http://localhost:5000/api/register',user)
+  }
 }

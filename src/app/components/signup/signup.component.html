@@ -1,1 +1,117 @@
-<p>signup works!</p>
+<div class="container mt-2 mt-sm-3 mt-md-3">
+  <div class="row mt-2 mt-sm-3 mt-md-3">
+    <div class="col-sm-12 col-md-5 offset-md-2 mt-2 mt-sm-3 mt-md-3">
+      <h3 class="text-capitalize fw-bold text-center">Signup</h3>
+      <div class="card-body mt-3">
+        <form [formGroup]="signupForm" (ngSubmit)="signup()">
+          <!-- name -->
+          <div class="mt-2">
+            <label for="" class="form-label text-capitalize">name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+              placeholder="please enter your name"
+              formControlName="name"
+            />
+          </div>
+          <!-- end name -->
+          <!-- email -->
+          <div class="mt-2">
+            <label for="" class="form-label text-capitalize">email</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="please enter your email"
+              formControlName="email"
+            />
+          </div>
+          <!-- end email -->
+          <!-- password -->
+          <div class="mb-2">
+            <label for="" class="form-label text-capitalize">password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              id="password"
+              placeholder="please enter your password"
+              formControlName="password"
+            />
+          </div>
+          <!-- end password -->
+          <!-- repeat password -->
+          <div class="mb-2">
+            <label for="" class="form-label text-capitalize"
+              >repeat password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              name="repeat password"
+              id="repeat password"
+              placeholder="please enter your password again"
+              formControlName="repeat_password"
+            />
+          </div>
+          <!-- end repeat password -->
+          <!-- phone -->
+          <div class="mb-2">
+            <label for="" class="form-label text-capitalize">phone</label>
+            <input
+              type="tel"
+              class="form-control"
+              name="phone"
+              id="phone"
+              placeholder="please enter your phone"
+              formControlName="phone"
+            />
+          </div>
+          <!-- end phone  -->
+          <!-- Address -->
+          <div class="mb-2">
+            <label for="" class="form-label text-capitalize">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              name="Address"
+              id="Address"
+              placeholder="please enter your Address"
+              formControlName="address"
+            />
+          </div>
+          <!-- end Address  -->
+          <!-- photo  -->
+          <div class="mb-2">
+            <label for="" class="form-label text-capitalize">photo</label>
+            <input
+              type="file"
+              class="form-control"
+              name="photo"
+              id="photo"
+              formControlName="photo"
+              (change)="onSelectPhoto($event)"
+            />
+          </div>
+          <!-- end photo -->
+
+          <div class="d-flex align-items-center mt-5">
+            <button type="submit" class="btn form-btn px-3">Signup</button>
+            <span class="lead ms-2">Do you have account ? </span>
+            <a [routerLink]="['/']"> login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-5 mt-2 mt-sm-3 mt-md-3 ">
+      <div class="d-flex w-100 h-100 justify-content-center align-items-center">
+        @if(imagePerview){
+        <img class="view d-none d-md-block " src="{{ imagePerview }}" alt="" />
+        }
+      </div>
+    </div>
+  </div>
+</div>

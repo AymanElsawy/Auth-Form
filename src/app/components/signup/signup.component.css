@@ -1,0 +1,114 @@
+/* form */
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem #31304d;
+  border: 0px solid #31304d;
+  background-color: transparent;
+  color: #31304d;
+}
+label,
+h3 {
+  color: #31304d;
+}
+.form-control {
+  background-color: #31304d;
+  color: white;
+}
+.form-control::placeholder {
+  color: white;
+}
+.form-control:focus::placeholder {
+  color: black;
+}
+.form-btn {
+  background-color: #31304d;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.form-btn:hover {
+  color: #31304d;
+}
+.form-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+}
+.form-btn:hover::after {
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+/* end form */
+/* social btn */
+.social-btn {
+  background: #31304d;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #31304d;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: #fff;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+.social-btn svg {
+  fill: #fff;
+  height: 25px;
+  width: 25px;
+}
+
+.social-btn span {
+  margin: 10px;
+}
+
+.social-btn:hover {
+  color: #31304d;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.social-btn:hover svg {
+  fill: #31304d;
+}
+/* end social btn */
+@media screen and (min-width: 992px) {
+  .social-btn {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 5px;
+    padding: 0px 4px;
+  }
+}
+
+
+/* .perview{
+  width: 100px;
+  height: 100px;
+} */
+.moka{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in;
+}
+ img.view {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
