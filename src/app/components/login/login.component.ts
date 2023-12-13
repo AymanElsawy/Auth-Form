@@ -9,7 +9,7 @@ import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,RouterModule],
+  imports: [ReactiveFormsModule, RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -66,6 +66,10 @@ export class LoginComponent {
         this.router.navigate(['/home']); // navigate to home
       }
     })
+  }
+
+  loginWithFacebook() {
+   
   }
 
 }
