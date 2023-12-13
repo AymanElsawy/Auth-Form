@@ -92,3 +92,7 @@
     padding: 0px 4px;
   }
 }
+/* spinner */
+.spinner-border{
+  color: #31304d;
+}

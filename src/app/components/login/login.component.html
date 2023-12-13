@@ -2,6 +2,11 @@
   <div class="row mt-2 mt-sm-3 mt-md-5">
     <div class="col-sm-12 col-md-6 offset-md-3 mt-2 mt-sm-3 mt-md-5">
       <h3 class="text-capitalize fw-bold text-center">Login</h3>
+      @if(loading){
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border" role="status"></div>
+      </div>
+      }
       <div class="card-body mt-5">
         <form [formGroup]="loginForm" (ngSubmit)="login()">
           <!-- email -->
@@ -43,7 +48,9 @@
           <div class="d-flex align-items-center mt-5">
             <button type="submit" class="btn form-btn px-3">Login</button>
             <span class="lead ms-2">Don't have account ? </span
-            ><a [routerLink]="['/signup']" routerLinkActive="router-link-active" >Signup</a>
+            ><a [routerLink]="['/signup']" routerLinkActive="router-link-active"
+              >Signup</a
+            >
           </div>
         </form>
         <!-- social -->
@@ -51,7 +58,7 @@
         <p class="fw-medium text-capitalize lead mt-5">Or login using</p>
 
         <div
-          class="d-flex justify-content-between flex-column flex-sm-column flex-lg-row gap-2"
+          class="d-flex justify-content-around flex-column flex-sm-column flex-lg-row gap-2"
         >
           <button
             class="social-btn d-flex justify-content-center align-content-center"

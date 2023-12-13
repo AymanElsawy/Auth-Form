@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="d-flex vh-100 justify-content-center align-items-center">
+    <div class="card" style="width: 18rem">
+      <img [src]="user.photo" class="card-img-top" alt="user photo" />
+      <div class="card-body">
+        <h5 class="card-title">{{user.name}}</h5>
+        <p class="card-text">
+          {{user.address}}
+        </p>
+        <p class="card-text">
+          {{user.phone}}
+        </p>
+        <p class="card-text">
+          {{user.email}}
+        </p>
+        <a (click)="logOut()" class="btn btn-danger">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>

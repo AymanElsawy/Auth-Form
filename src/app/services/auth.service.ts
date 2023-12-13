@@ -15,7 +15,7 @@ export class AuthService {
     });
   }
 
-  register(user: FormData) {
-    return this.http.post('http://localhost:5000/api/register',user)
+  register(user: FormData): Observable<{ message: string, token: string }> {
+    return this.http.post<{ message: string, token: string }>('http://localhost:5000/api/register',user)
   }
 }
