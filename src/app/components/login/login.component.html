@@ -46,7 +46,7 @@
           </div>
           <!-- end email -->
           <div class="d-flex align-items-center mt-5">
-            <button type="submit" class="btn form-btn px-3">Login</button>
+            <button type="submit" class="btn form-btn px-3" [disabled]="loginForm.invalid">Login</button>
             <span class="lead ms-2">Don't have account ? </span
             ><a [routerLink]="['/signup']" routerLinkActive="router-link-active"
               >Signup</a
@@ -78,7 +78,8 @@
             </svg>
             <span>Continue with Facebook</span>
           </a>
-          <button
+          <a
+          href="http://localhost:5000/auth/google"
             class="social-btn d-flex justify-content-center align-content-center"
           >
             <svg
@@ -104,7 +105,7 @@
               ></path>
             </svg>
             <span>Continue with Google</span>
-          </button>
+          </a>
         </div>
         <!-- end social -->
       </div>

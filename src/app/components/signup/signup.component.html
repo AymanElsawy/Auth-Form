@@ -102,9 +102,9 @@
           <!-- end photo -->
 
           <div class="d-flex align-items-center mt-5">
-            <button type="submit" class="btn form-btn px-3">Signup</button>
+            <button type="submit" class="btn form-btn px-3" [disabled]="signupForm.invalid">Signup</button>
             <span class="lead ms-2">Do you have account ? </span>
-            <a [routerLink]="['/']"> login</a>
+            <a [routerLink]="['/']" class="ms-2"> login</a>
           </div>
         </form>
       </div>

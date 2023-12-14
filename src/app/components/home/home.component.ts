@@ -19,6 +19,11 @@ export class HomeComponent {
 
   ngOnInit() {
     this.getPayload(); // get the payload
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { token: null },
+      queryParamsHandling: 'merge',
+    });
   }
 
   getPayload() {
