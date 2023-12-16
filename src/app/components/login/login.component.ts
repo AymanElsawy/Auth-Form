@@ -67,9 +67,4 @@ export class LoginComponent {
       }
     })
   }
-
-  loginWithFacebook() {
-   
-  }
-
 }
